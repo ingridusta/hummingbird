@@ -41,6 +41,10 @@ global_settings:
     to_disable:
       - blockwishlist
   hooks:
+    modules_to_unhook:
+      displayHome:
+        - ps_imageslider
+        - module_not_found
     modules_to_hook:
       displayCustomerAccount:
         - psgdpr
@@ -63,7 +67,6 @@ global_settings:
         # Keep existing hooks and append them after
         - ~
       displayHome:
-        - ps_imageslider
         - ps_customtext
         - ps_featuredproducts
         - ps_banner
@@ -74,12 +77,6 @@ global_settings:
       displayFooterBefore:
         - ps_socialfollow
         - ps_emailsubscription
-        # Keep existing hooks and append them after
-        - ~
-      displayFooter:
-        - ps_linklist
-        - ps_customeraccountlinks
-        - ps_contactinfo
         # Keep existing hooks and append them after
         - ~
       displayFooterProduct:
